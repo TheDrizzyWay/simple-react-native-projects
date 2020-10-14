@@ -13,13 +13,13 @@ export default function(state = initialState, { type, payload }) {
     case FETCH_COIN_DATA_INIT:
       return Object.assign({}, state, {
         isFetching: true,
-        data: null,
+        data: [],
         hasError: false,
         errorMessage: null,
       });
     case FETCH_COIN_DATA_SUCCESS:
       return Object.assign({}, state, {
-        isFetching: true,
+        isFetching: false,
         data: payload,
         hasError: false,
         errorMessage: null,
